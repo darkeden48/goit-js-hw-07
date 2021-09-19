@@ -1,7 +1,6 @@
-const navEl=document.querySelector('ul');
-console.log(navEl);
-console.log(`В списке ${navEl.children.length} категории`);
-for (let i=0;i<3;i++){
-    console.log(navEl.children.length);
-    
-}
+
+const navH=document.querySelectorAll('li.item');
+console.log(`В списке ${navH.length} категории`);
+navH.forEach(num=> console.log('Категория:', num.firstElementChild.textContent, 
+'Количество элементов:', num.lastElementChild.children.length));
+
