@@ -6,10 +6,10 @@ const ingredients = [
     'Зелень',
     'Приправы',
   ];
-  const ingredientsCall =document.querySelectorAll('#ingredients');
-  const ingredientsPicker=ingredients.map(element=>{
-    const ingredientsEl=document.createElement('li');
-    ingredientsEl.textContent=element;
- return element});
-  ingredientsCall.appendChild(element);
-   
+  const ingredientsCall =document.querySelector('#ingredients');
+  const iou = ingredients.map(ingredient=> {
+      const item = document.createElement("li");
+      item.textContent = ingredient;
+      return item;
+  });
+    ingredientsCall.append(...iou);
