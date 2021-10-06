@@ -18,11 +18,11 @@ const images = [
     const imageImg = document.createElement('img');
     imageImg.setAttribute('src',image.url);
     imageImg.setAttribute('alt',image.alt);
-    imageEl.append(imageImg);
+    imageEl.insertAdjacentHTML('beforeend', '<img src=${image.url}.jpg>');
    return imageEl;
   });
-  // galleryCall.append(...galleryRead)
-  galleryCall.insertAdjacentHTML('beforeend', )
+  galleryCall.append(...galleryRead)
+  
     
 
 
