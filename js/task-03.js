@@ -13,24 +13,14 @@ const images = [
     },
   ];
   const galleryCall = document.querySelector('#gallery');
-  const galleryRead= images.map(image=>{
-    const imageEl = document.createElement('li');
-    const imageImg = document.createElement('img');
-    imageImg.setAttribute('src',image.url);
-    imageImg.setAttribute('alt',image.alt);
-    imageEl.insertAdjacentHTML('beforeend', '<img src=${image.url}.jpg>');
-   return imageEl;
-  });
-  galleryCall.append(...galleryRead)
-  
+  galleryCall.classList.add('list')
+  const galleryRead= images.reduce((string,image)=>(string+
+    `<li>
+    <img class= "item_img"
+    src = '${image.url}'
+    alt = '${image.alt}'
+    width = "400">
+    </li>`),'');
     
+  galleryCall.insertAdjacentHTML("beforeend",galleryRead);
 
-
-
-  // const ingredientsCall =document.querySelector('#ingredients');
-  // const iou = ingredients.map(ingredient=> {
-  //     const item = document.createElement("li");
-  //     item.textContent = ingredient;
-  //     return item;
-  // });
-  //   ingredientsCall.append(...iou);

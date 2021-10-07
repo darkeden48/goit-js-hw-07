@@ -3,10 +3,6 @@ const span=document.querySelector('#text');
 console.dir(input);
 console.dir(span);
 const sizeControl=function(event){
-        input.value === span.fontSize;
-        return span.fontSize;
+        span.style.fontSize=event.target.value+'em'
 }
-
-
-    
-input.addEventListener('change', sizeControl)
+input.addEventListener('input', sizeControl)
